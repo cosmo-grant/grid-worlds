@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-UK">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Cosmo Grant" />
+    <meta name="description" content="Widget for creating grid worlds to illustrate Humean supervenience." />
+    <title>Grid Worlds</title>
+    <h1>Grid Worlds: Humean Supervenience By Example</h1>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="grid" class="grid"></div>
+    <div id="controls">
+      <input type="text" id="title-input" placeholder="Title" />
+      <input type="text" id="description-input" placeholder="Description" />
+      <button id="prev-frame-button">Prev</button>
+      <span id="frame-indicators"
+        >Frame <span id="current-frame-indicator">?</span>/<span id="final-frame-indicator">?</span></span
+      >
+      <button id="next-frame-button">Next</button>
+      <button id="add-frame-button">Add Frame</button>
+      <button id="delete-frame-button">Delete Frame</button>
+      <button id="clear-frame-button">Clear</button>
+      <button id="invert-frame-button">Invert</button>
+      <input type="number" id="rows-input" value="5" min="1" max="50" />
+      <input type="number" id="cols-input" value="10" min="1" max="50" />
+      <button id="resize-button">Resize</button>
+      <button id="download-json-button">Download JSON</button>
+      <button id="upload-json-button">Upload JSON</button>
+      <input type="file" id="upload-json-input" accept=".json" hidden />
+      <button id="save-button">Save</button>
+      <button id="reset-button">Reset Grid</button>
+      <select id="saved-grids"></select>
+      <button id="delete-button">Delete</button>
+    </div>
+
+    <section id="about">
+      <h2>What is this?</h2>
+      <p>An invitation to explore Humean Supervenience.</p>
+      <h2>Humean Supervenience?</h2>
+      <p>Let's take an example. Behold Small World!</p>
+      <p>
+        Small World is a 15 by 15 grid of cells. Each cell is either on or off. The distance between two cells is the
+        minimum number of steps between them, traveling up, down, left, or right. Time is discrete: t=0, t=1, t=2, ...
+        Each frame shows the state of the cells at a point in time. The frames together show Small World's mosaic, from
+        its Big Bang to its Big Crunch.
+      </p>
+      <p>
+        Humean Supervenience about Small World is the thesis that every question about Small World is settled by its
+        mosaic.
+      </p>
+
+      <h2>But that's obviously true.</h2>
+      <p>Is it?</p>
+
+      <p>Here are some questions about Small World:</p>
+      <ul>
+        <li>Is the central cell on at t=7?</li>
+        <li>Are all the cells ever on?</li>
+        <li>Is any cell always on?</li>
+      </ul>
+
+      <p>
+        These questions are settled by the mosaic. If these were all the questions about Small World, then Humean
+        Supervenience about Small World would be obviously true.
+      </p>
+
+      <p>But there are more. For example:</p>
+      <ul>
+        <li>If the top-right cell had been on at t=0, would the bottom-left cell have been on at t=1?</li>
+        <li>Is it a law of Small World that if a cell is on at t then it's on at t+1?</li>
+        <li>Is Small World deterministic?</li>
+        <li>Why was the top-right cell on at t=7?</li>
+      </ul>
+
+      <p>
+        Humean Supervenience about Small World says that these questions too &mdash; in fact, <em>all</em> questions
+        &mdash; are settled by Small World's mosaic.
+      </p>
+
+      <h2>But that's obviously false.</h2>
+      <p>Is it?</p>
+
+      <p>
+        Enter David Lewis. He tries to show how every question about Small World is settled by its mosaic. So he defends
+        Humean Supervenience about Small World.
+      </p>
+
+      <p>Except not really. What Lewis actually does is defend Humean Supervenience about <em>our</em> world.</p>
+
+      <blockquote>
+        [Humean Supervenience about our world] says that in a world like ours, the fundamental relations are exactly the
+        spatiotemporal relations: distance relations, both spacelike and timelike, and perhaps also occupancy relations
+        between point-sized things and spacetime points. And it says that in a world like ours, the fundamental
+        properties are local qualities: perfectly natural intrinsic properties of points, or of point-sized occupants of
+        points. Therefore it says that all else supervenes on the spatiotemporal arrangement of local qualities
+        throughout all of history, past and present and future.
+        <cite>&mdash; Humean Supervenience Debugged, Mind, 103: 473–90</cite>
+      </blockquote>
+
+      <p>
+        Every question about our world, says Lewis, is settled by the spatiotemporal arrangement of local qualities, aka
+        our world's mosaic.
+      </p>
+
+      <h2>How does he argue for this?</h2>
+      <p>
+        At length. (See
+        <a href="https://plato.stanford.edu/entries/lewis-metaphysics/index.html">David Lewis's Metaphysics</a>
+        for a survey and references.) But with too few examples.
+      </p>
+
+      <h2>Thus this tool?</h2>
+      <p>
+        Yes. '"What is the use of a book," thought Alice "without pictures or conversation?"'. And what is the use of a
+        theory without examples? Maybe Grid Worlds can provide them.
+      </p>
+
+      <p>
+        Humean Supervenience about our world is a more interesting claim than Humean Supervenience about Small World,
+        because there are more, and more interesting, questions about our world than about Small World. (It's a small
+        world after all.) Still, there are interesting questions about Small World, like those above. And showing how,
+        questions about Small World are settled by Small World's mosaic may illuminate how questions about our world are
+        settled by our world's mosaic &mdash; according to Lewis. Small World, and other such grid worlds, are small
+        enough to work with, but big enough to make the work worthwhile.
+      </p>
+
+      <p>So let's be resolutely concrete. No discussion of Humean Supervenience without a grid world to illustrate!</p>
+    </section>
+
+    <script src="small_world.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
