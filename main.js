@@ -35,7 +35,7 @@ class Grid {
     // "click" feels sluggish; mousedown is snappy.
     this.gridElement.addEventListener("mousedown", (e) => {
       if (e.target.classList.contains("cell")) {
-        this.toggleCell(e.target.dataset.row, e.target.dataset.col);
+        this.toggleCell(Number(e.target.dataset.row), Number(e.target.dataset.col));
       }
     });
     this.prevFrameButton.addEventListener("click", () => {
