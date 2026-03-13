@@ -65,8 +65,8 @@ class Grid {
       let newRows = Math.floor(Number(rowsInput.value));
       let newCols = Math.floor(Number(colsInput.value));
 
-      if (newRows < 1) newRows = grid.rows;
-      if (newCols < 1) newCols = grid.cols;
+      if (newRows < 1) newRows = this.rows;
+      if (newCols < 1) newCols = this.cols;
       if (newRows > 50) newRows = 50;
       if (newCols > 50) newCols = 50;
 
