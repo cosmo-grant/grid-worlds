@@ -1,6 +1,16 @@
 const SMALL_WORLD = {
   title: "Small World",
-  description: "A grid world example. Are all questions settled by the mosaic?",
+  description: `\
+A grid world example. Are all questions settled by the mosaic?
+
+Click "Reset" to make your own. \
+Add frames, toggle cells, resize etc. \
+Add a title and description too ("A counterexample to the Best System Account of laws"?). \
+Click "Save", then return later and click "Load". \
+Want to share your example with a friend? \
+Click "Download JSON" and send it to them; then they click "Upload JSON".
+`
+  ,
   rows: 15,
   cols: 15,
   frames: [
